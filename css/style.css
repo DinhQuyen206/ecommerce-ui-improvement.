@@ -87,3 +87,37 @@ h2 { font-size:30px; letter-spacing:-.6px; }
     grid-template-columns: 1fr;
   }
 }
+
+/* BUOI 2 - THUC HANH CSS SELECTOR VA BOX MODEL */
+
+/* 1. Điều chỉnh đường viền và bo góc */
+.product-card {
+  border: 2px solid #cbd8ee;
+  border-radius: 20px;
+}
+
+/* 2. Tạo khoảng đệm cho khu vực hình ảnh */
+.product-card__image {
+  padding: 12px;
+}
+
+/* 3. Tăng khoảng đệm bên trong thẻ */
+.product-card__body {
+  padding: 24px;
+}
+
+/* 4. Định dạng tên sản phẩm */
+.product-card h3 {
+  font-size: 20px;
+}
+
+/* 5. Định dạng giá và khoảng cách */
+.price {
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+/* 6. Điều chỉnh bo góc nút xem chi tiết */
+.product-card .button {
+  border-radius: 11px;
+}

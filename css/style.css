@@ -88,41 +88,54 @@ h2 { font-size:30px; letter-spacing:-.6px; }
   }
 }
 
-/* BUOI 2 - CSS SELECTOR VA BOX MODEL */
+/* BUOI 2 - THUC HANH CSS SELECTOR VA BOX MODEL */
 
-/* 1. Vien va bo goc the san pham */
+/* 1. Thay doi vien va tao do noi cho the */
 .product-card {
-  border: 2px solid #9db8ed;
+  border: 2px solid #93b4f5;
   border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(36, 91, 215, 0.12);
 }
 
-/* 2. Khoang dem khu vuc hinh anh */
+/* 2. Tao khoang dem va phan tach khung anh */
 .product-card__image {
-  padding: 24px;
+  padding: 26px;
+  background: #e2ecff;
+  border-bottom: 2px solid #bcd0f6;
 }
 
-/* 3. Khoang dem noi dung */
+/* 3. Dieu chinh khoang dem noi dung */
 .product-card__body {
-  padding: 30px;
+  padding: 26px;
 }
 
-/* 4. Ten san pham */
+/* 4. Dinh dang ten san pham */
 .product-card h3 {
-  font-size: 22px;
+  font-size: 21px;
 }
 
-/* 5. Khoang cach giua mo ta va ten */
+/* 5. Tang khoang cach giua ten va mo ta */
 .product-card__description {
   margin-top: 18px;
 }
 
-/* 6. Gia san pham */
-.price {
-  color: var(--blue);
-  margin-bottom: 22px;
+/* 6. Tao khung rieng cho gia va nut */
+.product-card__bottom {
+  margin-top: auto;
+  padding: 16px;
+  width: 100%;
+  background: #f0f5ff;
+  border: 1px solid #cbdcf9;
+  border-radius: 14px;
 }
 
-/* 7. Nut xem chi tiet */
+/* 7. Dinh dang gia */
+.price {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+/* 8. Bo goc nut xem chi tiet */
 .product-card .button {
-  border-radius: 14px;
+  border-radius: 10px;
 }

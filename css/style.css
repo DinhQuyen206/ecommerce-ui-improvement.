@@ -139,3 +139,12 @@ h2 { font-size:30px; letter-spacing:-.6px; }
 .product-card .button {
   border-radius: 10px;
 }
+
+/* BUOI 2 - BUOC 5: THUC HANH FLEXBOX */
+
+.product-card .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}

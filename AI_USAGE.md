@@ -1,5 +1,5 @@
 # AI Usage Log
-
+## BT Cá nhân chương 1
 ## 1. Công cụ AI
 - Công cụ: **ChatGPT**.
 
@@ -9,7 +9,6 @@
 - Hỗ trợ tạo, giải thích mã HTML5/CSS3 và lựa chọn các quy tắc responsive.
 
 ## 3. Prompt đã sử dụng
-Dưới đây là **các yêu cầu chính được tổng hợp từ nội dung bài làm**; không khẳng định đây là bản chép nguyên văn toàn bộ lịch sử hội thoại:
 
 1. Phân tích website `https://ohstem.vn/` ở năm khu vực: trang chủ, danh mục sản phẩm, chi tiết sản phẩm, tìm kiếm và giỏ hàng. Với từng khu vực, phân biệt điều quan sát được với nhận xét/đề xuất AI; không khẳng định tính năng chưa kiểm chứng.
 2. Đề xuất giao diện cải tiến thẻ sản phẩm của danh sách bộ kit STEM: bố cục, thành phần HTML5, tổ chức CSS3, hiển thị desktop/mobile và các tiêu chí kiểm tra khả năng sử dụng.
@@ -38,4 +37,15 @@ Dưới đây là **các yêu cầu chính được tổng hợp từ nội dung
 - `aspect-ratio: 4 / 3`, `object-fit: contain`: giữ tỷ lệ ảnh và không cắt hình minh họa.
 - `@media (max-width: 699px)`: áp dụng CSS khi màn hình rộng tối đa 699 px; `grid-template-columns: 1fr` chuyển danh sách sang một cột.
 
-**Lưu ý:** AI chỉ hỗ trợ; người nộp cần kiểm tra kết quả thực tế và tự giải thích mã nguồn theo yêu cầu giảng viên.
+## Bài tập cá nhân chương 2
+## **Ghi lại việc sử dụng AI**
+
+Công cụ sử dụng: ChatGPT. Em cung cấp bản Word, CSS, HTML và ảnh giao diện để nhờ đối chiếu. AI hỗ trợ rà soát mã, sửa phần giải thích và đề xuất cách kiểm tra; em thực hiện thao tác tải lại trang và phản hồi kết quả. 
+
+| Nội dung nhờ AI | Em kiểm tra / điều chỉnh như thế nào |
+| :---- | :---- |
+| Rà soát HTML5 | Đối chiếu cấu trúc section, article, ul/li, alt và vị trí script với index.html. |
+| Hướng dẫn CSS Box Model | Thử tăng padding, so ảnh Before/After rồi giảm giá trị ở màn hình nhỏ. |
+| Giải thích Flexbox | Kiểm tra space-between so với center bằng nút “Xem chi tiết”. |
+| Kiểm tra CSS Grid | Thử 3 cột và đối chiếu 4/2/1 cột ở các kích thước màn hình. |
+| Kiểm tra lỗi và hiệu ứng | Xem DevTools/ảnh chụp, phân biệt hover và focus bằng Tab. |

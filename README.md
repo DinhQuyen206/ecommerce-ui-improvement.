@@ -50,3 +50,15 @@ AI được sử dụng để hỗ trợ phân tích giao diện OhStem, đề x
 
 ## Lưu ý về dữ liệu
 Bốn sản phẩm, hình ảnh SVG và ba mức giá số là **dữ liệu giả định phục vụ học tập**, không phải thông tin sản phẩm hoặc giá bán chính thức của OhStem. Sản phẩm thứ tư hiển thị “Liên hệ báo giá”. Không suy diễn độ tuổi, trình độ hoặc nhãn giảm giá khi chưa có dữ liệu xác minh.
+
+## Bài tập cá nhân Buổi 2: HTML5 và CSS3
+
+ - Website tham khảo từ Buổi 1: OhStem Education.
+ - Website thực hành: KitLab - giao diện bộ kit STEM minh họa.
+ - Khu vực cải thiện: danh sách và thẻ sản phẩm.
+ - HTML5: header, nav, main, section, article, ul, li, img, a.
+ - CSS3: selector, Box Model, Flexbox, Grid, responsive,
+   hover và focus-visible.
+ - Kiểm tra: 1366px (4 cột), 768px (2 cột), 390px (1 cột).
+ - Cách chạy: mở index.html; sử dụng GitHub Pages để xem online.
+ - Dữ liệu sản phẩm và giá chỉ phục vụ bài tập học tập.

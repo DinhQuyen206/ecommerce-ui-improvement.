@@ -1,0 +1,12 @@
+/* Bài 2d: nền logo rộng 30px, lặp và cố định khi cuộn. */
+body { margin:0; font-family:Arial,sans-serif; background-image:url('../assets/bit-logo.png'); background-size:30px 30px; background-repeat:repeat; background-attachment:fixed; }
+.sheet { max-width:850px; margin:40px auto; padding:32px; background:rgba(255,255,255,.96); min-height:110vh; }
+h1{font-size:24px} h2{font-size:20px} h3{font-size:16px;margin-top:30px}
+/* 2a */ .ueh {color:blue;text-align:center;font-weight:bold;text-decoration:underline;font-size:30px;}
+/* 2b: alpha chỉ làm mờ chữ, giữ nguyên màu viền và nền. */
+.faculty {text-align:right;font-style:italic;border:2px dotted yellow;border-radius:12px;background:gray;font-size:15px;padding:15px;} .faculty span {color:rgba(255,0,0,.5);}
+/* 2c: các lớp đổ bóng mô phỏng mẫu BIT-UEH. */
+.shadow {display:inline-block;font-size:60px;font-weight:bold;color:#a4d72a;text-shadow:3px 3px 2px #a30000,6px 5px 5px red,10px 7px 15px #6e0000,0 0 18px #92b900;padding:15px;}
+.overflow {width:100px;height:50px;border:1px solid #555;margin:12px 0;line-height:normal;}
+.hidden {overflow:hidden;} .ellipsis {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;} .nowrap {white-space:nowrap;overflow:auto;} .note{font-size:14px;color:#555}
+@media(max-width:600px){.sheet{margin:20px;padding:20px}.shadow{font-size:44px}}

@@ -1,0 +1,81 @@
+/* Bai 8b - HTML va anh tu bo css2 goc cua de bai. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Times New Roman", serif; }
+#root {
+    width: 1024px;
+    max-width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+#site-header {
+    background: #ccc;
+    color: #fff;
+    font-size: 32px;
+    text-shadow: 2px 2px 2px #111;
+    margin: 0 0 35px;
+    padding: 18px 10px;
+}
+#site-header span {
+    padding-left: 78px;
+    background: url('../assets/logo.png') no-repeat left center;
+    background-size: 62px auto;
+}
+.superheroes {
+    list-style: none;
+    padding: 0 12px;
+    margin: 0;
+    min-height: 280px;
+}
+.superheroes li {
+    width: 175px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 1px;
+    transition: width .2s ease;
+}
+.superheroes img {
+    border: 0;
+    border-radius: 16px;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+.hero-header {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    color: #aaa;
+    text-shadow: 1px 1px 2px #222;
+    font-size: 18px;
+}
+/* Opacity giu lien ket trong thu tu Tab cho nguoi dung ban phim. */
+.superheroes a {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    padding: 12px 0;
+    color: white;
+    background: #666;
+    text-decoration: none;
+    margin-top: 4px;
+}
+.superheroes li:hover,
+.superheroes li:focus-within { width: 205px; }
+.superheroes li:hover .hero-header,
+.superheroes li:focus-within .hero-header { color: #fff; }
+.superheroes li:hover a,
+.superheroes li:focus-within a {
+    position: static;
+    opacity: 1;
+    text-decoration: underline;
+}
+.superheroes li:focus-within { outline: 2px solid #066; }
+@media (max-width: 700px) {
+    .superheroes li { width: 140px; margin: 10px 2px; }
+    .superheroes li:hover,
+    .superheroes li:focus-within { width: 165px; }
+    #site-header { font-size: 26px; }
+}

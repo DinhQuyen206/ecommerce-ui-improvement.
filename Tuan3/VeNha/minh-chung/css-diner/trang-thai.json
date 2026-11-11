@@ -1,0 +1,130 @@
+[
+  {
+    "completed": true,
+    "level": "1A"
+  },
+  {
+    "completed": true,
+    "level": "2A"
+  },
+  {
+    "completed": true,
+    "level": "3#id"
+  },
+  {
+    "completed": true,
+    "level": "4A  B"
+  },
+  {
+    "completed": true,
+    "level": "5#id  A"
+  },
+  {
+    "completed": true,
+    "level": "6.classname"
+  },
+  {
+    "completed": true,
+    "level": "7A.className"
+  },
+  {
+    "completed": true,
+    "level": "8Put your back into it!"
+  },
+  {
+    "completed": true,
+    "level": "9A, B"
+  },
+  {
+    "completed": true,
+    "level": "10*"
+  },
+  {
+    "completed": true,
+    "level": "11A  *"
+  },
+  {
+    "completed": true,
+    "level": "12A + B"
+  },
+  {
+    "completed": true,
+    "level": "13A ~ B"
+  },
+  {
+    "completed": true,
+    "level": "14A > B"
+  },
+  {
+    "completed": true,
+    "level": "15:first-child"
+  },
+  {
+    "completed": true,
+    "level": "16:only-child"
+  },
+  {
+    "completed": true,
+    "level": "17:last-child"
+  },
+  {
+    "completed": true,
+    "level": "18:nth-child(A)"
+  },
+  {
+    "completed": true,
+    "level": "19:nth-last-child(A)"
+  },
+  {
+    "completed": true,
+    "level": "20:first-of-type"
+  },
+  {
+    "completed": true,
+    "level": "21:nth-of-type(A)"
+  },
+  {
+    "completed": true,
+    "level": "22:nth-of-type(An+B)"
+  },
+  {
+    "completed": true,
+    "level": "23:only-of-type"
+  },
+  {
+    "completed": true,
+    "level": "24:last-of-type"
+  },
+  {
+    "completed": true,
+    "level": "25:empty"
+  },
+  {
+    "completed": true,
+    "level": "26:not(X)"
+  },
+  {
+    "completed": true,
+    "level": "27[attribute]"
+  },
+  {
+    "completed": true,
+    "level": "28A[attribute]"
+  },
+  {
+    "completed": true,
+    "level": "29[attribute=\"value\"]"
+  },
+  {
+    "completed": true,
+    "level": "30[attribute^=\"value\"]"
+  },
+  {
+    "completed": true,
+    "level": "31[attribute$=\"value\"]"
+  },
+  {
+    "completed": true,
+    "level": "32[attribute*=\"value\"]"
+  }
+]

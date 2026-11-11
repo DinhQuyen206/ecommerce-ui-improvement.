@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Bài 1 — CSS Selector</title>
+        <link rel="stylesheet" href="css/BaiTap1.css" />
+    </head>
+    <body>
+        <header>
+            <a href="index.html">← Mục lục</a>
+            <h1>Bài 1. Luyện tập CSS Selector</h1>
+            <p>Đặng Đình Quyến · 31241025748 · EE0002</p>
+            <p>
+                Đã giải trực tiếp trên hai trò chơi. Ảnh bên dưới ghi lại các bước làm và trạng thái
+                hoàn thành thực tế.
+            </p>
+        </header>
+        <main>
+            <section>
+                <h2>CSS Diner — 32/32 màn</h2>
+                <a href="minh-chung/css-diner/hoan-thanh.png"
+                    ><img
+                        class="result"
+                        src="minh-chung/css-diner/hoan-thanh.png"
+                        alt="Thông báo hoàn thành CSS Diner — 32/32 màn"
+                /></a>
+                <details>
+                    <summary>Xem đáp án và ảnh từng màn</summary>
+                    <div class="gallery">
+                        <figure>
+                            <figcaption><strong>Màn 1</strong><code>plate</code></figcaption>
+                            <a href="minh-chung/css-diner/level-01.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-01.png"
+                                    alt="Màn 1: plate"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 2</strong><code>bento</code></figcaption>
+                            <a href="minh-chung/css-diner/level-02.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-02.png"
+                                    alt="Màn 2: bento"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 3</strong><code>#fancy</code></figcaption>
+                            <a href="minh-chung/css-diner/level-03.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-03.png"
+                                    alt="Màn 3: #fancy"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 4</strong><code>plate apple</code></figcaption>
+                            <a href="minh-chung/css-diner/level-04.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-04.png"
+                                    alt="Màn 4: plate apple"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 5</strong><code>#fancy pickle</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-05.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-05.png"
+                                    alt="Màn 5: #fancy pickle"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 6</strong><code>.small</code></figcaption>
+                            <a href="minh-chung/css-diner/level-06.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-06.png"
+                                    alt="Màn 6: .small"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 7</strong><code>orange.small</code></figcaption>
+                            <a href="minh-chung/css-diner/level-07.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-07.png"
+                                    alt="Màn 7: orange.small"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 8</strong><code>bento orange.small</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-08.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-08.png"
+                                    alt="Màn 8: bento orange.small"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 9</strong><code>plate, bento</code></figcaption>
+                            <a href="minh-chung/css-diner/level-09.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-09.png"
+                                    alt="Màn 9: plate, bento"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 10</strong><code>*</code></figcaption>
+                            <a href="minh-chung/css-diner/level-10.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-10.png"
+                                    alt="Màn 10: *"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 11</strong><code>plate *</code></figcaption>
+                            <a href="minh-chung/css-diner/level-11.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-11.png"
+                                    alt="Màn 11: plate *"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 12</strong><code>plate + apple</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-12.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-12.png"
+                                    alt="Màn 12: plate + apple"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 13</strong><code>bento ~ pickle</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-13.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-13.png"
+                                    alt="Màn 13: bento ~ pickle"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 14</strong><code>plate &gt; apple</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-14.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-14.png"
+                                    alt="Màn 14: plate &gt; apple"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 15</strong><code>orange:first-child</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-15.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-15.png"
+                                    alt="Màn 15: orange:first-child"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 16</strong><code>plate :only-child</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-16.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-16.png"
+                                    alt="Màn 16: plate :only-child"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 17</strong><code>.small:last-child</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-17.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-17.png"
+                                    alt="Màn 17: .small:last-child"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 18</strong><code>plate:nth-child(3)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-18.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-18.png"
+                                    alt="Màn 18: plate:nth-child(3)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 19</strong><code>bento:nth-last-child(3)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-19.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-19.png"
+                                    alt="Màn 19: bento:nth-last-child(3)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 20</strong><code>apple:first-of-type</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-20.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-20.png"
+                                    alt="Màn 20: apple:first-of-type"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 21</strong><code>plate:nth-of-type(even)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-21.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-21.png"
+                                    alt="Màn 21: plate:nth-of-type(even)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 22</strong><code>plate:nth-of-type(2n+3)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-22.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-22.png"
+                                    alt="Màn 22: plate:nth-of-type(2n+3)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 23</strong><code>plate apple:only-of-type</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-23.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-23.png"
+                                    alt="Màn 23: plate apple:only-of-type"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 24</strong
+                                ><code>apple:last-of-type, orange:last-of-type</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-24.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-24.png"
+                                    alt="Màn 24: apple:last-of-type, orange:last-of-type"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 25</strong><code>bento:empty</code></figcaption>
+                            <a href="minh-chung/css-diner/level-25.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-25.png"
+                                    alt="Màn 25: bento:empty"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 26</strong><code>apple:not(.small)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-26.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-26.png"
+                                    alt="Màn 26: apple:not(.small)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 27</strong><code>[for]</code></figcaption>
+                            <a href="minh-chung/css-diner/level-27.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-27.png"
+                                    alt="Màn 27: [for]"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 28</strong><code>plate[for]</code></figcaption>
+                            <a href="minh-chung/css-diner/level-28.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-28.png"
+                                    alt="Màn 28: plate[for]"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 29</strong><code>bento[for=&quot;Vitaly&quot;]</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-29.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-29.png"
+                                    alt='Màn 29: bento[for="Vitaly"]'
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 30</strong><code>[for^=&quot;Sa&quot;]</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-30.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-30.png"
+                                    alt='Màn 30: [for^="Sa"]'
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 31</strong><code>[for$=&quot;ato&quot;]</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-31.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-31.png"
+                                    alt='Màn 31: [for$="ato"]'
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 32</strong><code>[for*=&quot;obb&quot;]</code>
+                            </figcaption>
+                            <a href="minh-chung/css-diner/level-32.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-diner/level-32.png"
+                                    alt='Màn 32: [for*="obb"]'
+                            /></a>
+                        </figure>
+                    </div>
+                </details>
+            </section>
+            <section>
+                <h2>CSS Speedrun — Intro + 10/10 màn</h2>
+                <a href="minh-chung/css-speedrun/hoan-thanh.png"
+                    ><img
+                        class="result"
+                        src="minh-chung/css-speedrun/hoan-thanh.png"
+                        alt="Thông báo hoàn thành CSS Speedrun — Intro + 10/10 màn"
+                /></a>
+                <details>
+                    <summary>Xem đáp án và ảnh từng màn</summary>
+                    <div class="gallery">
+                        <figure>
+                            <figcaption>
+                                <strong>Intro</strong><code>li:first-child</code>
+                            </figcaption>
+                            <a href="minh-chung/css-speedrun/intro.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/intro.png"
+                                    alt="Intro: li:first-child"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 1</strong><code>p:not(.foo)</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-01.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-01.png"
+                                    alt="Màn 1: p:not(.foo)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 2</strong><code>li:nth-child(2n+3)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-speedrun/level-02.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-02.png"
+                                    alt="Màn 2: li:nth-child(2n+3)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 3</strong><code>div &gt; *</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-03.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-03.png"
+                                    alt="Màn 3: div &gt; *"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 4</strong><code>[data-item]</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-04.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-04.png"
+                                    alt="Màn 4: [data-item]"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 5</strong><code>p ~ span</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-05.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-05.png"
+                                    alt="Màn 5: p ~ span"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 6</strong><code>:enabled</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-06.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-06.png"
+                                    alt="Màn 6: :enabled"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 7</strong
+                                ><code
+                                    >li:nth-child(4n+1), li:nth-child(4n+2):not(:last-child)</code
+                                >
+                            </figcaption>
+                            <a href="minh-chung/css-speedrun/level-07.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-07.png"
+                                    alt="Màn 7: li:nth-child(4n+1), li:nth-child(4n+2):not(:last-child)"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption><strong>Màn 8</strong><code>a + span</code></figcaption>
+                            <a href="minh-chung/css-speedrun/level-08.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-08.png"
+                                    alt="Màn 8: a + span"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 9</strong><code>#foo &gt; .foo</code>
+                            </figcaption>
+                            <a href="minh-chung/css-speedrun/level-09.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-09.png"
+                                    alt="Màn 9: #foo &gt; .foo"
+                            /></a>
+                        </figure>
+                        <figure>
+                            <figcaption>
+                                <strong>Màn 10</strong
+                                ><code>div &gt; div &gt; code:last-child:not(.foo)</code>
+                            </figcaption>
+                            <a href="minh-chung/css-speedrun/level-10.png" target="_blank"
+                                ><img
+                                    loading="lazy"
+                                    src="minh-chung/css-speedrun/level-10.png"
+                                    alt="Màn 10: div &gt; div &gt; code:last-child:not(.foo)"
+                            /></a>
+                        </figure>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </body>
+</html>

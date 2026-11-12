@@ -1,0 +1,70 @@
+:root{color-scheme:dark;--text:#f6f5ff;--muted:#aeb4c9;--glass:rgba(16,22,41,.84)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 70% -10%,#2d2851 0,transparent 42%),#080b19;color:var(--text);font-family:Segoe UI,Arial,sans-serif}
+button{font:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}
+.game-shell{max-width:1170px;margin:0 auto;padding:24px 20px 16px}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:#f4af82}
+h1{margin:6px 0 0;font-size:clamp(23px,3.2vw,38px);line-height:1.12;letter-spacing:1px}h1 span{color:#ffc482}
+.sound-button{color:#d8deed;border:1px solid #50546b;border-radius:11px;padding:12px 16px;background:#181d34;font-size:13px;white-space:nowrap}.sound-button:hover{background:#282e4d}
+.arena{position:relative;isolation:isolate;height:min(61vw,590px);min-height:420px;max-height:590px;overflow:hidden;border:1px solid #45415d;border-radius:20px;background:radial-gradient(ellipse at 57% 38%,#67334d 0%,transparent 37%),linear-gradient(180deg,#111c32 0%,#2a2339 45%,#241d34 72%,#0d1225 100%);box-shadow:0 30px 70px #0008}
+.arena::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 48%,#080a1c88 100%)}
+.arena::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.28;background-image:radial-gradient(#ffdfb9 1px,transparent 1px);background-size:71px 61px;animation:stars 9s linear infinite}
+.moon{position:absolute;width:160px;height:160px;border-radius:50%;background:#ebbec1;box-shadow:0 0 50px #cfa3b999,0 0 120px #db83b844;top:9%;left:47%;opacity:.42}
+.mountain{position:absolute;bottom:24%;width:100%;height:52%;background:#1b1a30;clip-path:polygon(0 65%,13% 39%,22% 59%,36% 12%,47% 45%,58% 25%,70% 63%,84% 17%,100% 52%,100% 100%,0 100%)}
+.mountain-two{bottom:19%;height:40%;opacity:.9;background:#141529;transform:scaleX(-1)}
+.mist{position:absolute;inset:auto 0 14% 0;height:29%;background:linear-gradient(0deg,transparent,#b7a2c023,transparent);filter:blur(18px);animation:mist 7s ease-in-out infinite alternate}
+.ground{position:absolute;bottom:0;height:25%;width:100%;background:linear-gradient(180deg,#373047 0,#1b1d30 38%,#0d1222 100%);border-top:2px solid #7e596062;clip-path:polygon(0 22%,12% 13%,29% 18%,45% 10%,63% 23%,84% 11%,100% 14%,100% 100%,0 100%)}
+.ground-glow{position:absolute;bottom:6%;left:21%;width:67%;height:14%;border-radius:50%;background:#cb5c5670;filter:blur(48px)}
+.hud{position:absolute;left:3%;right:3%;top:3.5%;z-index:8;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.hud-fighter{width:36%;padding:11px 14px;background:#0c1224bc;border:1px solid #8d8ba638;border-radius:12px;box-shadow:0 7px 28px #0004;backdrop-filter:blur(9px)}
+.hud-top{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:12px}.hud-top b{letter-spacing:.8px}.hud-top span{font-size:11px;color:#cfd6e4;white-space:nowrap}
+.health-track{margin-top:10px;width:100%;height:13px;border-radius:20px;background:#11152b;box-shadow:inset 0 1px 3px #000b;overflow:hidden}
+.health-fill{height:100%;width:100%;border-radius:20px;transition:width .36s ease;background-size:200% 100%;box-shadow:inset 0 -3px 4px #0003}
+.hero-fill{background-image:linear-gradient(90deg,#1aa4db,#39ecce,#1aa4db)}.dragon-fill{background-image:linear-gradient(90deg,#d54546,#ff8c4c,#d54546)}
+.hud-caption{font-size:10px;color:#b0b7c9;margin-top:7px}.versus{font-style:italic;font-weight:900;font-size:28px;color:#ffb36e;text-shadow:0 0 15px #f45256;align-self:center;margin-top:5px}
+.character{position:absolute;z-index:4;will-change:transform}.hero{left:8%;bottom:10%;width:27%;max-width:290px;height:64%;min-height:250px;filter:drop-shadow(10px 18px 14px #0008);transform-origin:center bottom;animation:heroIdle 3s ease-in-out infinite}
+.hero-aura{position:absolute;inset:8% 6% 6%;z-index:-1;border-radius:48%;background:#3fc7f743;filter:blur(28px)}
+.hero-art{position:absolute;inset:0 2% 0 5%;overflow:hidden;mask-image:linear-gradient(180deg,#000 72%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);clip-path:polygon(9% 0,91% 0,100% 12%,100% 100%,0 100%,0 15%)}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:center 10%;transform:scale(1.07);filter:contrast(1.14) saturate(1.12)}
+.shield{position:absolute;right:-6%;bottom:0;width:44%;aspect-ratio:1;border-radius:50%;border:9px solid #b51d37;background:radial-gradient(circle,#17476b 0 29%,#e8e8ed 30% 40%,#b51d37 41% 58%,#f9f7f0 59% 70%,#bd243b 71%);box-shadow:0 10px 16px #000a,inset 0 0 12px #0008;display:grid;place-items:center;transform:rotate(-12deg)}
+.shield span{color:#f5f5fa;font-size:clamp(24px,4vw,47px);text-shadow:0 2px 3px #0016}
+.character-shadow{position:absolute;z-index:-2;bottom:0;left:6%;width:93%;height:13%;border-radius:50%;background:#000a;filter:blur(12px);transform:scaleY(.6)}
+.dragon{right:4%;bottom:7%;width:49%;max-width:520px;height:73%;transform-origin:center 80%;animation:dragonIdle 3.4s ease-in-out infinite}
+.dragon-aura{position:absolute;inset:23% 14%;border-radius:50%;filter:blur(38px);background:#ff673338;z-index:-1}
+.dragon-art{position:relative;width:100%;height:100%;overflow:visible;filter:drop-shadow(6px 14px 8px #080512aa)}
+.wing{transform-box:fill-box;transform-origin:70% 75%;animation:wingFlap 2.5s ease-in-out infinite alternate}.wing-back{animation-delay:-1.3s}
+.dragon-fire{pointer-events:none;position:absolute;z-index:5;left:-43%;top:35%;width:64%;height:25%;opacity:0;transform-origin:100% 50%;background:radial-gradient(ellipse at 80% 50%,#fff2ad 0 15%,#ff9b27 35%,#e43826 62%,transparent 75%);clip-path:polygon(100% 48%,3% 0,21% 32%,0 58%,30% 75%,8% 100%);filter:drop-shadow(0 0 17px #ffa121)}
+.dragon-fire span{position:absolute;inset:24% 5% 25% 12%;background:#ffe6aa;clip-path:polygon(100% 48%,0 7%,23% 47%,0 95%);opacity:.75}
+.dragon.is-breathing .dragon-fire{animation:fireBreath .78s both}
+.hero.is-attacking{animation:heroAttack .62s ease-in-out}.hero.is-guarding .shield{animation:shieldBlock .65s ease-in-out infinite;box-shadow:0 0 25px #68e7ff,inset 0 0 16px #acefff}
+.hero.is-guarding .hero-aura{background:#a9fbff99;filter:blur(21px)}.hero.is-wounded .hero-art{animation:injury .6s}.dragon.is-wounded .dragon-art{animation:injury .55s}.dragon.is-clawing{animation:dragonClaw .72s}
+.effects{position:absolute;inset:0;z-index:7;pointer-events:none;overflow:hidden}.fx-particle{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--color,#ffa147);box-shadow:0 0 12px var(--color,#ffa147);animation:particle .85s ease-out forwards}
+.fx-slash{position:absolute;height:5px;width:210px;border-radius:50%;background:linear-gradient(90deg,transparent,#5fd8ff,#fff,#64ebff,transparent);box-shadow:0 0 18px #42dfff;transform:rotate(-22deg);animation:slash .35s ease-out forwards}
+.fx-beam{position:absolute;left:28%;top:56%;width:45%;height:16px;border-radius:99px;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,#fff,#65e1ff,#fff);box-shadow:0 0 15px #86eaff,0 0 36px #3ecdfb;animation:beam .65s ease-out forwards}
+.fx-damage{position:absolute;z-index:9;color:#ffce7e;font-size:28px;font-weight:900;text-shadow:0 3px 9px #000,0 0 16px #f42;animation:damageNumber .95s ease-out forwards}.fx-damage.hero-damage{color:#ff717d}
+.battle-message{position:absolute;z-index:9;left:50%;bottom:6%;transform:translateX(-50%);padding:8px 16px;background:#0c1128b8;border:1px solid #ffffff25;border-radius:40px;font-size:13px;font-weight:650;text-align:center;white-space:nowrap;max-width:94%;text-overflow:ellipsis;overflow:hidden;box-shadow:0 4px 12px #0004}
+.red-flash,.blue-flash{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0}.red-flash{background:#ff2c304e}.blue-flash{background:#7cefff6e}.red-flash.active{animation:flash .48s}.blue-flash.active{animation:flash .55s}
+.arena.is-shaking{animation:shake .36s}
+.overlay{position:absolute;inset:0;z-index:15;display:flex;align-items:center;justify-content:center;padding:18px;background:#050918b8;backdrop-filter:blur(6px)}.overlay.hidden{display:none}.overlay-panel{text-align:center;width:min(440px,100%);border:1px solid #f0c0a241;background:linear-gradient(145deg,#23253be8,#11172de8);border-radius:20px;padding:28px 30px;box-shadow:0 20px 70px #0009}.overlay-kicker{font-size:12px;letter-spacing:2px;color:#ffbd85;font-weight:800}.overlay h2{font-size:clamp(24px,4vw,35px);margin:10px 0}.overlay p{color:#c6cad7;font-size:14px;line-height:1.65;margin:0 0 22px}.primary-button{background:linear-gradient(90deg,#e56b4a,#efb36b);border:0;padding:14px 20px;border-radius:11px;color:#201529;font-weight:900;box-shadow:0 6px 22px #da6d4e55}.primary-button:hover{filter:brightness(1.14)}.result-symbol{font-size:48px}
+.bottom-panel{display:flex;align-items:center;gap:24px;justify-content:space-between;margin-top:15px;border:1px solid #34364c;border-radius:15px;background:var(--glass);padding:17px 20px}.energy-block{width:31%;min-width:185px}.energy-caption{display:flex;justify-content:space-between;gap:10px;font-size:12px;letter-spacing:.3px;color:#dce6f9}.energy-track{margin:9px 0 6px;background:#111529;height:10px;border-radius:10px;overflow:hidden}.energy-fill{height:100%;width:0;background:linear-gradient(90deg,#3f9beb,#81f5ff);border-radius:10px;box-shadow:0 0 12px #6ae2ff;transition:width .25s}.energy-block small{font-size:10px;color:var(--muted)}.action-buttons{display:flex;flex:1;justify-content:flex-end;gap:12px}.action-button{display:grid;grid-template-columns:26px auto;column-gap:8px;align-items:center;min-width:147px;min-height:59px;text-align:left;background:#292b43;border:1px solid #6c677e;border-radius:11px;color:#fff;padding:9px 13px;transition:transform .15s,background .15s}.action-button span{font-size:22px;grid-row:span 2}.action-button strong{font-size:12px;white-space:nowrap}.action-button small{color:#aeb3c8;font-size:10px}.action-button:not(:disabled):hover{transform:translateY(-3px);background:#3c3955}.attack-button{border-color:#d07869}.shield-button{border-color:#63a9cb}.special-button{border-color:#edbf66;background:#4a3e4a}.special-button:not(:disabled){box-shadow:0 0 16px #ecb35d55}
+.instructions{text-align:center;color:#aeb5cb;font-size:12px;line-height:1.6;margin:12px auto 0}
+@keyframes heroIdle{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes dragonIdle{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes wingFlap{from{transform:rotate(-4deg) scaleY(1)}to{transform:rotate(6deg) scaleY(.88)}}
+@keyframes heroAttack{0%{transform:translateX(0)}38%{transform:translate(75px,-18px) rotate(4deg)}55%{transform:translate(105px,-10px) rotate(-5deg)}100%{transform:translateX(0)}}
+@keyframes dragonClaw{0%,100%{transform:translateX(0)}45%{transform:translateX(-100px) rotate(-5deg)}}
+@keyframes shieldBlock{0%,100%{transform:rotate(-12deg) scale(1)}50%{transform:rotate(-2deg) scale(1.2)}}
+@keyframes injury{0%,100%{filter:brightness(1)}20%,55%{filter:brightness(2.8) sepia(.6) saturate(3) hue-rotate(-24deg)}70%{filter:brightness(.6)}}
+@keyframes particle{0%{opacity:1;transform:translate(0,0) scale(1.5)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.1)}}
+@keyframes slash{0%{opacity:0;transform:translate(-20px,22px) rotate(-22deg) scaleX(.25)}35%{opacity:1}100%{opacity:0;transform:translate(18px,-23px) rotate(-22deg) scaleX(1.3)}}
+@keyframes beam{0%{opacity:1;transform:scaleX(0)}35%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1.14)}}
+@keyframes damageNumber{0%{opacity:1;transform:translateY(0) scale(.6)}50%{opacity:1;transform:translateY(-33px) scale(1.25)}100%{opacity:0;transform:translateY(-85px) scale(1)}}
+@keyframes fireBreath{0%{opacity:0;transform:scaleX(.1)}25%,74%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(.8)}}
+@keyframes flash{0%,100%{opacity:0}30%{opacity:1}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-3px)}}
+@keyframes mist{from{transform:translateX(-4%)}to{transform:translateX(4%)}}
+@keyframes stars{to{background-position:30px 30px}}
+@media(max-width:850px){.game-shell{padding:15px 10px}.arena{height:530px}.hero{width:31%;left:4%}.dragon{width:57%;right:-2%}.bottom-panel{flex-wrap:wrap}.energy-block{width:100%}.action-buttons{justify-content:stretch;width:100%}.action-button{flex:1;min-width:0;padding:8px}.hud-fighter{width:42%}.hud-caption{display:none}}
+@media(max-width:520px){h1{font-size:20px}.eyebrow{font-size:9px}.site-header{align-items:flex-start}.sound-button{font-size:0;padding:11px}.sound-button::first-letter{font-size:16px}.arena{height:450px;min-height:450px}.hud{gap:5px;top:2%}.hud-fighter{padding:9px;width:44%}.hud-top{font-size:10px;display:block}.hud-top span{display:block;margin-top:3px}.health-track{height:10px;margin-top:7px}.versus{font-size:17px}.hero{width:43%;height:56%;left:-3%;bottom:15%}.dragon{width:73%;height:60%;right:-14%;bottom:16%}.battle-message{font-size:10px;bottom:5%}.moon{width:110px;height:110px}.bottom-panel{padding:12px}.action-buttons{gap:6px}.action-button{grid-template-columns:1fr;text-align:center;gap:2px}.action-button span{grid-row:auto;font-size:20px}.action-button strong{font-size:10px}.action-button small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.hero,.dragon,.wing,.mist,.arena::after{animation:none}}

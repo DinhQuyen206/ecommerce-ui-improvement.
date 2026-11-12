@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đại chiến Anh Hùng và Rồng</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="anhhung.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="site-header">
+      <div>
+        <span class="eyebrow">MINI GAME • HTML / CSS / JAVASCRIPT</span>
+        <h1>ĐẠI CHIẾN <span>ANH HÙNG &amp; RỒNG</span></h1>
+      </div>
+      <button id="soundToggle" class="sound-button" type="button" aria-label="Bật hoặc tắt âm thanh">🔊 Âm thanh: Bật</button>
+    </header>
+
+    <section id="arena" class="arena" aria-label="Đấu trường chiến đấu" tabindex="0">
+      <div class="moon"></div>
+      <div class="mountain mountain-one"></div>
+      <div class="mountain mountain-two"></div>
+      <div class="mist"></div>
+      <div class="ground"></div>
+      <div class="ground-glow"></div>
+      <div id="redFlash" class="red-flash"></div>
+      <div id="blueFlash" class="blue-flash"></div>
+
+      <div class="hud">
+        <div class="hud-fighter hud-hero">
+          <div class="hud-top"><b>★ ANH HÙNG</b><span id="heroHpText">100 / 100 HP</span></div>
+          <div class="health-track"><div id="heroHealth" class="health-fill hero-fill"></div></div>
+          <div class="hud-caption">Khiên thép • Đòn đánh năng lượng</div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="hud-fighter hud-dragon">
+          <div class="hud-top"><b>🐉 HỎA LONG</b><span id="dragonHpText">100 / 100 HP</span></div>
+          <div class="health-track"><div id="dragonHealth" class="health-fill dragon-fill"></div></div>
+          <div class="hud-caption">Móng vuốt • Hơi thở lửa</div>
+        </div>
+      </div>
+
+      <div id="hero" class="character hero" aria-label="Anh hùng mặc áo giáp, cầm khiên">
+        <div class="hero-aura"></div>
+        <div class="hero-art"><img src="anhhung.jpg" alt="Nhân vật anh hùng từ ảnh bạn cung cấp" draggable="false"></div>
+        <div class="shield"><span>★</span></div>
+        <div class="character-shadow"></div>
+      </div>
+
+      <div id="dragon" class="character dragon" aria-label="Rồng màu đỏ đen đang dang cánh">
+        <div class="dragon-aura"></div>
+        <svg class="dragon-art" viewBox="0 0 520 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hỏa long khổng lồ với cánh và móng vuốt">
+          <defs>
+            <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9f3437"/><stop offset=".47" stop-color="#591b2b"/><stop offset="1" stop-color="#21182f"/></linearGradient>
+            <linearGradient id="wingGrad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a44251"/><stop offset="1" stop-color="#351729"/></linearGradient>
+            <linearGradient id="bellyGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e38e51"/><stop offset="1" stop-color="#74383e"/></linearGradient>
+            <filter id="eyeGlow"><feGaussianBlur stdDeviation="2.8"/></filter>
+          </defs>
+          <g class="dragon-tail">
+            <path d="M401 264 Q471 250 493 282 Q517 320 477 340 Q499 306 463 310 Q437 304 404 330Z" fill="#442033" stroke="#d15e53" stroke-width="3"/>
+            <path d="M480 338 L506 341 484 357Z" fill="#e19b64"/>
+          </g>
+          <g class="wing wing-back">
+            <path d="M320 204 Q328 96 435 26 L435 116 485 78 468 198 502 177 Q475 266 379 285Z" fill="url(#wingGrad)" stroke="#d47367" stroke-width="6"/>
+            <path d="M329 210 L435 29 M355 232 L483 81 M365 248 L500 178" fill="none" stroke="#f2a078" stroke-opacity=".38" stroke-width="4"/>
+          </g>
+          <g class="wing wing-front">
+            <path d="M300 213 Q278 90 190 15 L203 112 135 69 160 180 95 155 Q134 265 267 295Z" fill="url(#wingGrad)" stroke="#c86f6a" stroke-width="6"/>
+            <path d="M294 224 L191 19 M271 236 L137 72 M251 255 L98 158" fill="none" stroke="#efaa85" stroke-opacity=".36" stroke-width="4"/>
+          </g>
+          <g class="dragon-body">
+            <path d="M240 252 Q272 160 365 181 Q435 188 435 276 Q425 358 351 360 Q274 363 241 313Z" fill="url(#bodyGrad)" stroke="#c77667" stroke-width="6"/>
+            <path d="M261 257 Q298 231 356 248 Q405 278 394 322 Q345 363 293 329Z" fill="url(#bellyGrad)" opacity=".95"/>
+            <path d="M305 273 Q343 298 392 292 M299 298 Q342 322 394 315" fill="none" stroke="#763c43" stroke-width="6" opacity=".6"/>
+            <path d="M279 326 Q249 339 240 378 L280 383 293 358 305 384 336 382 339 347Z" fill="#39192c" stroke="#bd6a59" stroke-width="4"/>
+            <path d="M366 335 Q376 364 367 392 L393 392 403 372 416 394 444 384 425 337Z" fill="#381b2d" stroke="#b96559" stroke-width="4"/>
+            <g fill="#eab58c"><path d="M238 378 l-9 16 23 -10Z"/><path d="M282 383 l-7 15 20 -15Z"/><path d="M305 385 l-2 15 18 -16Z"/><path d="M368 392 l-8 14 21 -14Z"/><path d="M414 392 l4 16 15 -19Z"/></g>
+            <path d="M279 186 L290 143 310 184 328 134 349 181 378 155 380 191" fill="#d37a65" stroke="#e4a07a" stroke-width="3"/>
+          </g>
+          <g class="dragon-neck-head">
+            <path d="M253 262 Q216 240 202 206 Q190 165 162 173 Q145 193 169 231 Q194 273 241 295Z" fill="url(#bodyGrad)" stroke="#cb7469" stroke-width="5"/>
+            <path d="M148 147 L154 112 175 140 195 101 194 161" fill="#e8a078" stroke="#cf7a68" stroke-width="3"/>
+            <path d="M200 180 Q164 129 116 141 Q87 135 61 159 Q38 166 43 194 Q54 217 103 208 L143 222 Q180 222 198 193Z" fill="url(#bodyGrad)" stroke="#c77866" stroke-width="5"/>
+            <path d="M54 193 Q82 207 126 194 L155 208 Q125 233 78 220 L41 208Z" fill="#652333" stroke="#bf7462" stroke-width="4"/>
+            <path d="M53 207 l7 14 9 -12 10 16 7 -14 10 15 6 -16 10 11 5 -17" fill="#f6d4aa"/>
+            <path d="M71 153 L54 128 92 143 M150 151 l-1 -33 27 24" fill="#e8a177" stroke="#c77866" stroke-width="3"/>
+            <ellipse cx="106" cy="168" rx="12" ry="8" fill="#ffb334" filter="url(#eyeGlow)"/>
+            <ellipse cx="106" cy="168" rx="9" ry="6" fill="#ffd052"/><ellipse cx="105" cy="168" rx="2.5" ry="6" fill="#371522"/>
+            <circle cx="59" cy="186" r="4" fill="#1c111d"/>
+            <path d="M183 199 l16 -13 9 23" fill="#e5a078"/>
+          </g>
+        </svg>
+        <div class="dragon-fire"><span></span></div>
+        <div class="character-shadow"></div>
+      </div>
+
+      <div id="effects" class="effects" aria-hidden="true"></div>
+      <div id="battleMessage" class="battle-message" aria-live="polite">Nhấn “Bắt đầu” để tham chiến!</div>
+
+      <div id="startOverlay" class="overlay">
+        <div class="overlay-panel">
+          <span class="overlay-kicker">⚡ CHẾ ĐỘ CHIẾN ĐẤU</span>
+          <h2>Đánh bại Hỏa Long!</h2>
+          <p>Dùng đòn đánh, giơ khiên để giảm sát thương và tích đủ năng lượng để tung tuyệt chiêu.</p>
+          <button id="startButton" class="primary-button" type="button">⚔ BẮT ĐẦU CHIẾN ĐẤU</button>
+        </div>
+      </div>
+      <div id="endOverlay" class="overlay hidden" aria-live="assertive">
+        <div class="overlay-panel">
+          <span id="resultSymbol" class="result-symbol">🏆</span>
+          <h2 id="resultTitle">Chiến thắng!</h2>
+          <p id="resultText">Hỏa Long đã bị đánh bại.</p>
+          <button id="restartButton" class="primary-button" type="button">↻ CHƠI LẠI</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-panel" aria-label="Bảng điều khiển">
+      <div class="energy-block">
+        <div class="energy-caption"><b>⚡ NĂNG LƯỢNG</b><span id="energyText">0%</span></div>
+        <div class="energy-track"><div id="energyFill" class="energy-fill"></div></div>
+        <small>Đánh trúng rồng để nạp tuyệt chiêu</small>
+      </div>
+      <div class="action-buttons">
+        <button id="attackButton" class="action-button attack-button" type="button" disabled><span>⚔</span><strong>TẤN CÔNG</strong><small>Phím J</small></button>
+        <button id="shieldButton" class="action-button shield-button" type="button" disabled><span>🛡</span><strong>PHÒNG THỦ</strong><small>Phím K</small></button>
+        <button id="specialButton" class="action-button special-button" type="button" disabled><span>⚡</span><strong>TUYỆT CHIÊU</strong><small>Phím L • Cần 100%</small></button>
+      </div>
+    </section>
+    <p class="instructions">Cách chơi: <strong>J</strong> để đánh • <strong>K</strong> để đỡ đòn • <strong>L</strong> để dùng tuyệt chiêu. Rồng sẽ tự động tấn công. Âm thanh phát sau khi bạn bấm Bắt đầu.</p>
+  </main>
+</body>
+</html>

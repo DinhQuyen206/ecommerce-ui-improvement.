@@ -66,7 +66,7 @@ Các bài GET cần chạy qua máy chủ HTTP, không mở bằng file://.
 
 ## GitHub Pages
 
-Đường dẫn website sẽ được bổ sung sau khi triển khai.
+https://dinhquyen206.github.io/ecommerce-ui-improvement./JavaScript-Labs/
 
 ## Ghi chú
 

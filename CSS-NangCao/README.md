@@ -5,7 +5,7 @@
 - Họ tên: Đặng Đình Quyến
 - MSSV: 31241025748
 - Lớp học phần: 26C1INF50902702
-- Repository: https://github.com/DinhQuyen206/ecommerce-ui-improvement.
+- Repository: https://github.com/DinhQuyen206/ecommerce-ui-improvement./
 
 ## Mục tiêu
 

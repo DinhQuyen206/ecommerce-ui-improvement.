@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Đặng Đình Quyến | CSS nâng cao</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            color: #16324f;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: linear-gradient(120deg, #162c50, #2457a6);
+            color: white;
+            padding: 50px 24px;
+        }
+
+        .profile {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #b7c9e6;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1d4ed8;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid #dce5f0;
+            border-radius: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1d4ed8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background: #153b9c;
+        }
+
+        header .button {
+            background: white;
+            color: #16324f;
+        }
+
+        header .button:hover {
+            background: #dbeafe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="profile">
+        <img class="avatar" src="images/avatar.png"
+             alt="Ảnh đại diện của Đặng Đình Quyến">
+
+        <div>
+            <p>HỒ SƠ HỌC TẬP</p>
+            <h1>Đặng Đình Quyến</h1>
+            <p>CSS nâng cao – Phát triển ứng dụng TMĐT</p>
+            <p>
+                <strong>MSSV:</strong> 31241025748<br>
+                <strong>Lớp học phần:</strong> 26C1INF50902702
+            </p>
+            <a class="button"
+               href="https://github.com/DinhQuyen206/ecommerce-ui-improvement.">
+                My GitHub ↗
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2>Mục tiêu thực hành</h2>
+        <p>
+            Qua Lab07, em thực hành cách tổ chức bố cục website,
+            định vị các phần tử và điều chỉnh giao diện theo kích
+            thước màn hình. Em cũng tìm hiểu cách tạo hiệu ứng
+            bằng CSS và sử dụng Bootstrap để xây dựng giao diện.
+            Những kiến thức này giúp em thiết kế website thương
+            mại điện tử dễ sử dụng, trình bày sản phẩm rõ ràng
+            và phù hợp với nhiều thiết bị.
+        </p>
+    </section>
+
+    <section>
+        <h2>Bài thực hành Lab07</h2>
+        <p>
+            Gồm 19 bài về luồng hiển thị, định vị, float,
+            bố cục nhiều cột, responsive, hiệu ứng CSS và Bootstrap.
+            Bài 7.13 được thực hiện tiếp trên file của bài 7.12.
+        </p>
+        <a class="button" href="Lab07/index.html">
+            Xem danh sách 19 bài →
+        </a>
+    </section>
+
+    <section>
+        <h2>Những kiến thức và kỹ năng đã học</h2>
+
+        <h3>Tổ chức bố cục</h3>
+        <p>
+            Em hiểu cách các phần tử được sắp xếp trong trang,
+            sử dụng relative, absolute và z-index để điều chỉnh
+            vị trí và thứ tự chồng lớp. Qua float và clear,
+            em biết cách cho văn bản bao quanh ảnh và ngắt
+            luồng bao quanh khi cần.
+        </p>
+
+        <h3>Thiết kế thích ứng</h3>
+        <p>
+            Em sử dụng media queries và viewport để thay đổi
+            bố cục theo chiều rộng màn hình, chuyển từ nhiều
+            cột sang một cột và thay danh sách liên kết bằng
+            ô chọn trên màn hình nhỏ.
+        </p>
+
+        <h3>Hiệu ứng và Bootstrap</h3>
+        <p>
+            Em thực hành xoay, di chuyển, thu phóng và áp dụng
+            bộ lọc cho ảnh. Em biết tạo chuyển đổi mượt bằng
+            transition, hoạt ảnh bằng keyframes và dùng hệ
+            lưới Bootstrap để bố trí nội dung, ảnh và các nút.
+        </p>
+    </section>
+
+    <section>
+        <h2>Tự đánh giá sau khi hoàn thành</h2>
+        <p>
+            Sau khi hoàn thành Lab07, em hiểu rõ hơn cách định vị
+            phần tử, chia cột và xây dựng giao diện thích ứng.
+            Em thấy phần media queries hữu ích nhất vì giúp
+            website hiển thị phù hợp trên máy tính và điện thoại.
+            Phần khó nhất là xác định phần tử cha khi dùng
+            absolute và xử lý thứ tự chồng lớp bằng z-index.
+            Em có thể vận dụng kiến thức để bố trí danh sách
+            sản phẩm, tạo nhãn khuyến mãi, hiệu ứng cho nút
+            mua hàng và giao diện giỏ hàng. Em cần tiếp tục
+            rèn luyện cách kiểm tra bố cục trên nhiều kích
+            thước màn hình, tổ chức CSS rõ ràng và sử dụng
+            hiệu ứng hợp lý để trang dễ dùng.
+        </p>
+    </section>
+</main>
+
+<footer>
+    Đặng Đình Quyến · CSS nâng cao · Lab07
+</footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Lab07 – CSS nâng cao</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #16324f;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 28px;
+            background: white;
+            border-radius: 16px;
+        }
+
+        h1 {
+            color: #1d4ed8;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        li a {
+            display: block;
+            height: 100%;
+            padding: 16px;
+            background: #eff6ff;
+            border-radius: 8px;
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background: #dbeafe;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Lab07 – CSS nâng cao</h1>
+    <p>Đặng Đình Quyến – MSSV: 31241025748</p>
+    <p>Chọn một bài thực hành để xem kết quả.</p>
+
+    <ul>
+        <li><a href="lab07-exercise01.html">7.1 – Document Flow</a></li>
+        <li><a href="lab07-exercise02.html">7.2 – Relative Positioning</a></li>
+        <li><a href="lab07-exercise03.html">7.3 – Absolute Positioning</a></li>
+        <li><a href="lab07-exercise04.html">7.4 – Z-index</a></li>
+        <li><a href="lab07-exercise05.html">7.5 – Float</a></li>
+        <li><a href="lab07-exercise06.html">7.6 – Float trong phần tử chứa</a></li>
+        <li><a href="lab07-exercise07.html">7.7 – Nhiều phần tử Float</a></li>
+        <li><a href="lab07-exercise08.html">7.8 – Clear</a></li>
+        <li><a href="lab07-exercise09.html">7.9 – Chồng lớp trên ảnh</a></li>
+        <li><a href="lab07-exercise10.html">7.10 – Bố cục hai cột</a></li>
+        <li><a href="lab07-exercise11.html">7.11 – Bố cục ba cột</a></li>
+        <li><a href="lab07-exercise12.html">7.12 – Media Queries</a></li>
+        <li><a href="lab07-exercise12.html">7.13 – Viewport và menu thích ứng</a></li>
+        <li><a href="lab07-exercise14.html">7.14 – Transforms</a></li>
+        <li><a href="lab07-exercise15.html">7.15 – Transitions</a></li>
+        <li><a href="lab07-exercise16.html">7.16 – Transitions trên ảnh</a></li>
+        <li><a href="lab07-exercise17.html">7.17 – Filters</a></li>
+        <li><a href="lab07-exercise18.html">7.18 – Animations</a></li>
+        <li><a href="lab07-exercise19.html">7.19 – Bootstrap</a></li>
+    </ul>
+
+    <p><em>Bài 7.13 được thực hiện tiếp trên file của bài 7.12.</em></p>
+    <a href="../index.html">← Về trang chủ CSS nâng cao</a>
+</main>
+</body>
+</html>

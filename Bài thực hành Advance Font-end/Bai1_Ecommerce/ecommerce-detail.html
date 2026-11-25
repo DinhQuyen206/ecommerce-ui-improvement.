@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFFSTEP Runline | Chi tiết sản phẩm</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/xzoom@1.0.15/dist/xzoom.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
+
+  <style>
+    body {
+      background: #f5f6f8;
+      padding-bottom: 30px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .product-panel {
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .product-title {
+      margin-top: 0;
+    }
+
+    .product-price {
+      color: #b22a17;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .main-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #edf0f4;
+      border-radius: 4px;
+      cursor: zoom-in;
+    }
+
+    .gallery-thumbs {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+
+    .gallery-thumbs a {
+      display: block;
+    }
+
+    .gallery-thumbs img,
+    .related-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #edf0f4;
+    }
+
+    .gallery-thumbs .img-thumbnail.xactive {
+      border-color: #337ab7;
+    }
+
+    .quantity-input {
+      max-width: 100px;
+    }
+
+    .ratings {
+      margin-bottom: 6px;
+    }
+
+    .comment {
+      padding: 12px 0;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button"
+                data-toggle="collapse" data-target="#shop-menu"
+                aria-controls="shop-menu" aria-expanded="false">
+          <span class="sr-only">Mở menu điều hướng</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="ecommerce.html">OFFSTEP</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="shop-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="ecommerce.html">Trang chủ</a></li>
+          <li><a href="ecommerce.html#san-pham">Sản phẩm</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="ecommerce-status.html">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              Đơn hàng
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <ol class="breadcrumb">
+      <li><a href="ecommerce.html">Trang chủ</a></li>
+      <li><a href="ecommerce.html#san-pham">Sản phẩm</a></li>
+      <li class="active" aria-current="page">OFFSTEP Runline</li>
+    </ol>
+
+    <article class="thumbnail product-panel">
+      <div class="row">
+        <div class="col-sm-6">
+          <img id="main-photo"
+               class="xzoom img-responsive main-photo"
+               src="images/runline-01.jpg"
+               xoriginal="images/runline-01.jpg"
+               alt="Giày OFFSTEP Runline">
+
+          <div class="row gallery-thumbs">
+            <div class="col-xs-3">
+              <a href="images/runline-01.jpg">
+                <img class="xzoom-gallery img-thumbnail"
+                     src="images/runline-01.jpg"
+                     alt="Chọn ảnh Runline nhìn ngang">
+              </a>
+            </div>
+
+            <div class="col-xs-3">
+              <a href="images/runline-02.jpg">
+                <img class="xzoom-gallery img-thumbnail"
+                     src="images/runline-02.jpg"
+                     alt="Chọn ảnh Runline nhìn từ phía sau">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <h1 class="product-title">OFFSTEP Runline</h1>
+          <p class="product-price">1.192.000 đ</p>
+          <p>
+            Runline là mẫu sneaker nhẹ, đế êm, phù hợp chạy bộ nhẹ và đi
+            hằng ngày. Thân giày thoáng, phối màu dễ kết hợp với trang phục.
+          </p>
+          <p><a id="review-link" href="#comments">Xem 2 đánh giá</a></p>
+
+          <form id="product-form">
+            <div class="form-group">
+              <label for="quantity">Số lượng</label>
+              <input id="quantity" class="form-control quantity-input"
+                     type="number" name="quantity"
+                     min="1" step="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+              <label for="color">Màu sắc</label>
+              <select id="color" class="form-control" name="color">
+                <option value="Trắng xanh">Trắng xanh</option>
+                <option value="Đen">Đen</option>
+              </select>
+            </div>
+
+            <fieldset class="form-group">
+              <legend class="h5">Kích cỡ</legend>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                  <input type="radio" name="size" value="38"> 38
+                </label>
+                <label class="btn btn-default">
+                  <input type="radio" name="size" value="39"> 39
+                </label>
+                <label class="btn btn-default active">
+                  <input type="radio" name="size" value="40" checked> 40
+                </label>
+                <label class="btn btn-default">
+                  <input type="radio" name="size" value="41"> 41
+                </label>
+                <label class="btn btn-default">
+                  <input type="radio" name="size" value="42"> 42
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-default"
+                      data-toggle="modal" data-target="#contact-modal">
+                Liên hệ cửa hàng
+              </button>
+
+              <button type="submit" class="btn btn-success">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                Thêm vào giỏ
+              </button>
+            </div>
+
+            <p id="cart-message" class="text-success" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <section id="comments" class="well">
+      <h2 class="h3">Đánh giá sản phẩm</h2>
+
+      <div class="ratings">
+        <input id="average-stars" type="text" value="4"
+               aria-label="Điểm đánh giá trung bình">
+      </div>
+      <p>
+        <strong id="average-rating">4/5</strong>
+        <span id="review-count" class="text-muted">· 2 đánh giá</span>
+      </p>
+
+      <p>
+        <button type="button" class="btn btn-success" data-toggle="collapse"
+                data-target="#write-review" aria-controls="write-review"
+                aria-expanded="false">
+          Viết đánh giá
+        </button>
+      </p>
+
+      <div id="write-review" class="collapse">
+        <form id="review-form">
+          <div class="form-group">
+            <label for="review-name">Tên của bạn</label>
+            <input id="review-name" class="form-control"
+                   type="text" maxlength="60" required>
+          </div>
+
+          <div class="form-group">
+            <label for="review-rating">Điểm đánh giá</label>
+            <select id="review-rating" class="form-control">
+              <option value="5">5 sao</option>
+              <option value="4">4 sao</option>
+              <option value="3">3 sao</option>
+              <option value="2">2 sao</option>
+              <option value="1">1 sao</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="review-text">Bình luận</label>
+            <textarea id="review-text" class="form-control"
+                      rows="3" maxlength="400" required></textarea>
+          </div>
+
+          <p>
+            <button class="btn btn-primary" type="submit">Đăng đánh giá</button>
+          </p>
+        </form>
+      </div>
+
+      <div id="review-list"></div>
+    </section>
+
+    <section>
+      <h2 class="h3">Sản phẩm khác</h2>
+      <div class="row">
+        <div class="col-xs-8 col-sm-4 col-md-3">
+          <article class="thumbnail">
+            <img class="related-photo" src="images/courtline-01.jpg"
+                 alt="Giày OFFSTEP Courtline">
+            <div class="caption">
+              <h3 class="h4">OFFSTEP Courtline</h3>
+              <p>1.290.000 đ</p>
+              <a href="ecommerce.html#san-pham">Về danh sách sản phẩm</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="contact-modal" class="modal fade" tabindex="-1"
+       role="dialog" aria-labelledby="contact-title">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+                  aria-label="Đóng">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 id="contact-title" class="modal-title h4">Liên hệ cửa hàng</h2>
+        </div>
+
+        <div class="modal-body">
+          <p>Email minh họa <strong>hotro@offstep.example</strong></p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xzoom@1.0.15/dist/xzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+
+  <script>
+    $(function () {
+      var cartQuantity = 0;
+      var reviews = [
+        { name: "Minh Anh", rating: 5, text: "Giày nhẹ và đi êm." },
+        { name: "Gia Bảo", rating: 3, text: "Kiểu dáng đẹp, phần mũi hơi ôm chân." }
+      ];
+
+      var ratingOptions = {
+        theme: "krajee-svg",
+        min: 0,
+        max: 5,
+        step: 0.1,
+        size: "xs",
+        displayOnly: true,
+        showClear: false,
+        showCaption: false
+      };
+
+      if (typeof $.fn.xzoom === "function") {
+        $("#main-photo, .xzoom-gallery").xzoom({
+          position: "inside",
+          hover: false,
+          scroll: false
+        });
+      }
+
+      $("#product-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var quantity = Number($("#quantity").val());
+        var color = $("#color").val();
+        var size = $('input[name="size"]:checked').val();
+
+        cartQuantity += quantity;
+
+        $("#cart-message").text(
+          "Đã thêm " + quantity + " đôi Runline, màu " + color
+          + ", size " + size + ". Giỏ mẫu có " + cartQuantity + " đôi."
+        );
+      });
+
+      var averageStars = $("#average-stars");
+      averageStars.rating(ratingOptions);
+
+      function renderReviews() {
+        var total = 0;
+        var list = $("#review-list").empty();
+
+        reviews.forEach(function (review) {
+          total += review.rating;
+
+          var ratingInput = $("<input>", {
+            type: "text",
+            "aria-label": review.name + " đánh giá " + review.rating + " trên 5 sao"
+          }).val(review.rating);
+
+          var comment = $("<article>").addClass("comment");
+          comment.append(
+            $("<h3>").addClass("h5").text(review.name),
+            $("<div>").addClass("ratings").append(ratingInput),
+            $("<p>").text(review.text)
+          );
+
+          list.append(comment);
+          ratingInput.rating(ratingOptions);
+        });
+
+        var average = Math.round(total / reviews.length * 10) / 10;
+
+        averageStars.rating("update", average);
+        $("#average-rating").text(
+          average.toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + "/5"
+        );
+        $("#review-count").text("· " + reviews.length + " đánh giá");
+        $("#review-link").text("Xem " + reviews.length + " đánh giá");
+      }
+
+      $("#review-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var name = $("#review-name").val().trim();
+        var text = $("#review-text").val().trim();
+        var rating = Number($("#review-rating").val());
+
+        if (!name || !text) return;
+
+        reviews.push({ name: name, rating: rating, text: text });
+        renderReviews();
+        this.reset();
+        $("#write-review").collapse("hide");
+      });
+
+      renderReviews();
+    });
+  </script>
+</body>
+</html>

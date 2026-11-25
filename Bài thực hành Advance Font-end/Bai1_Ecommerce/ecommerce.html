@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFFSTEP | Cửa hàng sneaker</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
+
+  <style>
+    body {
+      background: #f5f6f8;
+      padding-bottom: 30px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .mobile-search {
+      clear: both;
+      padding: 0 15px 12px;
+    }
+
+    .shop-carousel {
+      margin-bottom: 24px;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .shop-carousel .item img {
+      width: 100%;
+      height: clamp(160px, 32vw, 350px);
+      object-fit: cover;
+      background: #e0e5ec;
+    }
+
+    .product-photo {
+      position: relative;
+    }
+
+    .product-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #e0e5ec;
+    }
+
+    .product-photo .label {
+      position: absolute;
+      top: 8px;
+      z-index: 1;
+      padding: 6px 8px;
+      font-size: 11px;
+    }
+
+    .discount-label {
+      left: 8px;
+    }
+
+    .product-label {
+      right: 8px;
+    }
+
+    .product-card .caption > p,
+    .ratings {
+      margin-bottom: 12px;
+    }
+
+    .product-price {
+      color: #b22a17;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .old-price {
+      margin-left: 5px;
+      color: #666;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .stock-progress {
+      height: 12px;
+      margin-bottom: 4px;
+      border-radius: 10px;
+      background: #fce2d4;
+    }
+
+    .stock-progress .progress-bar {
+      background: #e85a0c;
+    }
+
+    .stock-text {
+      display: block;
+      margin-bottom: 12px;
+      color: #555;
+      font-size: 12px;
+    }
+
+    .stock-low {
+      color: #a43a05;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button"
+                data-toggle="collapse" data-target="#shop-menu"
+                aria-controls="shop-menu" aria-expanded="false">
+          <span class="sr-only">Mở menu điều hướng</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="ecommerce.html">OFFSTEP</a>
+
+        <form class="shop-search mobile-search visible-xs-block" role="search">
+          <div class="input-group">
+            <input class="form-control" type="search"
+                   placeholder="Tìm sneaker" aria-label="Tìm sneaker">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Tìm</button>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <div class="collapse navbar-collapse" id="shop-menu">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="ecommerce.html">Trang chủ</a></li>
+          <li><a href="#san-pham">Sản phẩm</a></li>
+        </ul>
+
+        <form class="shop-search navbar-form navbar-left hidden-xs" role="search">
+          <div class="form-group">
+            <input class="form-control" type="search"
+                   placeholder="Tìm sneaker" aria-label="Tìm sneaker">
+          </div>
+          <button class="btn btn-default" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            Tìm
+          </button>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="ecommerce-status.html">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              Đơn hàng
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="sr-only">Cửa hàng sneaker OFFSTEP</h1>
+
+    <div id="shop-slider" class="carousel slide shop-carousel" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#shop-slider" data-slide-to="0"></li>
+        <li data-target="#shop-slider" data-slide-to="1"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/banner-01.jpg" alt="Bộ sưu tập sneaker OFFSTEP">
+        </div>
+        <div class="item">
+          <img src="images/banner-02.jpg" alt="Giới thiệu sneaker OFFSTEP Runline">
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#shop-slider"
+         role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Banner trước</span>
+      </a>
+
+      <a class="right carousel-control" href="#shop-slider"
+         role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Banner tiếp theo</span>
+      </a>
+    </div>
+
+    <div class="row" id="san-pham">
+      <aside class="col-sm-4 col-md-3">
+        <h2 class="h4">Danh mục</h2>
+
+        <div class="list-group" id="category-list">
+          <button class="list-group-item active" type="button"
+                  data-category="all" aria-pressed="true">
+            Tất cả sản phẩm <span class="badge">2</span>
+          </button>
+          <button class="list-group-item" type="button"
+                  data-category="running" aria-pressed="false">
+            Giày chạy bộ <span class="badge">1</span>
+          </button>
+          <button class="list-group-item" type="button"
+                  data-category="lifestyle" aria-pressed="false">
+            Giày thời trang <span class="badge">1</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="col-sm-8 col-md-9">
+        <h2 class="h4">Sản phẩm nổi bật</h2>
+        <p id="search-result" class="text-muted" role="status"></p>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4 product-item" data-category="running">
+            <article class="thumbnail product-card">
+              <div class="product-photo">
+                <a href="ecommerce-detail.html">
+                  <img src="images/runline-01.jpg" alt="Giày OFFSTEP Runline">
+                </a>
+                <span class="label label-danger discount-label">−20%</span>
+                <span class="label label-success product-label">New</span>
+              </div>
+
+              <div class="caption">
+                <h3 class="h4 product-name">
+                  <a href="ecommerce-detail.html">OFFSTEP Runline</a>
+                </h3>
+
+                <p>
+                  <span class="product-price">1.192.000 đ</span>
+                  <del class="old-price">1.490.000 đ</del>
+                </p>
+
+                <div class="progress stock-progress">
+                  <div class="progress-bar" role="progressbar"
+                       aria-label="Tỷ lệ Runline đã bán"
+                       aria-valuemin="0" aria-valuemax="100"
+                       aria-valuenow="70"
+                       aria-valuetext="Đã bán 28 trên 40 đôi"
+                       style="width: 70%"></div>
+                </div>
+                <span class="stock-text">Đã bán 28/40 đôi</span>
+
+                <p>Giày nhẹ, đế êm, phù hợp chạy bộ và đi hằng ngày.</p>
+
+                <div class="ratings">
+                  <input class="product-rating" type="text" value="4"
+                         aria-label="Runline được đánh giá 4 trên 5 sao">
+                  <a href="ecommerce-detail.html#comments">2 đánh giá</a>
+                </div>
+
+                <p>
+                  <a class="btn btn-primary btn-sm" href="ecommerce-detail.html">
+                    Xem chi tiết
+                  </a>
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-md-4 product-item" data-category="lifestyle">
+            <article class="thumbnail product-card">
+              <div class="product-photo">
+                <img src="images/courtline-01.jpg" alt="Giày OFFSTEP Courtline">
+                <span class="label label-primary product-label">Best Seller</span>
+              </div>
+
+              <div class="caption">
+                <h3 class="h4 product-name">OFFSTEP Courtline</h3>
+                <p class="product-price">1.290.000 đ</p>
+
+                <div class="progress stock-progress">
+                  <div class="progress-bar" role="progressbar"
+                       aria-label="Tỷ lệ Courtline đã bán"
+                       aria-valuemin="0" aria-valuemax="100"
+                       aria-valuenow="95"
+                       aria-valuetext="Đã bán 38 trên 40 đôi, còn 2 đôi"
+                       style="width: 95%"></div>
+                </div>
+                <span class="stock-text stock-low">Sắp bán hết · Còn 2 đôi</span>
+
+                <p>Sneaker đế thấp, dễ phối cùng trang phục hằng ngày.</p>
+
+                <div class="ratings">
+                  <input class="product-rating" type="text" value="5"
+                         aria-label="Courtline được đánh giá 5 trên 5 sao">
+                  <span>1 đánh giá</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+
+  <script>
+    $(function () {
+      $(".product-rating").rating({
+        theme: "krajee-svg",
+        min: 0,
+        max: 5,
+        step: 0.1,
+        size: "xs",
+        displayOnly: true,
+        showClear: false,
+        showCaption: false
+      });
+
+      var category = "all";
+      var keyword = "";
+      var products = $(".product-item");
+      var categoryButtons = $("#category-list button");
+      var searchInputs = $(".shop-search input");
+      var result = $("#search-result");
+
+      function filterProducts() {
+        var count = 0;
+
+        products.each(function () {
+          var product = $(this);
+          var name = product.find(".product-name").text().trim().toLowerCase();
+          var matchesCategory = category === "all"
+            || product.attr("data-category") === category;
+          var matchesKeyword = name.indexOf(keyword) !== -1;
+          var visible = matchesCategory && matchesKeyword;
+
+          product.toggle(visible);
+          if (visible) count += 1;
+        });
+
+        result.text(count ? "Hiển thị " + count + " sản phẩm"
+                          : "Không tìm thấy sản phẩm.");
+      }
+
+      categoryButtons.on("click", function () {
+        category = $(this).attr("data-category");
+        categoryButtons.removeClass("active").attr("aria-pressed", "false");
+        $(this).addClass("active").attr("aria-pressed", "true");
+        filterProducts();
+      });
+
+      $(".shop-search").on("submit", function (event) {
+        event.preventDefault();
+
+        var searchValue = $(this).find("input").val().trim();
+        keyword = searchValue.toLowerCase();
+        searchInputs.val(searchValue);
+        filterProducts();
+      });
+
+      filterProducts();
+    });
+  </script>
+</body>
+</html>

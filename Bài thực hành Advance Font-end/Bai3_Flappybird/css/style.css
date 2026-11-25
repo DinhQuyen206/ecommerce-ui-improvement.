@@ -1,0 +1,136 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Khung game và nền UEH */
+#container {
+    position: relative;
+    width: 350px;
+    height: 480px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background: url("../sprites/bg.png") center / 100% 100% no-repeat;
+}
+
+/* Mèo có cánh */
+#bird {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 65px;
+    height: 42px;
+    background: url("../sprites/bird.png") center / contain no-repeat;
+}
+
+/* Hình chung cho cả hai ống khói */
+.pole {
+    position: absolute;
+    right: -64px;
+    width: 60px;
+    height: 170px;
+    border: 2px solid #2d1039;
+    background: #2d1039 url("../sprites/chimney.png")
+        center / 190% 100% no-repeat;
+}
+
+/* Ống trên */
+#pole_1 {
+    top: 0;
+    border-top: none;
+}
+
+/* Ống dưới */
+#pole_2 {
+    bottom: 0;
+    border-bottom: none;
+}
+
+/* Điểm số */
+#score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 90px;
+    text-align: center;
+    text-shadow: 0 2px 5px #183047;
+    pointer-events: none;
+}
+
+/* Level ở góc trên bên trái */
+#level_badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #2d1039;
+    color: #fff;
+    font: bold 16px Arial, sans-serif;
+    pointer-events: none;
+}
+
+/* Hướng dẫn bắt đầu bằng phím */
+#play_btn {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font: bold 28px Arial, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 4px #000, 0 0 8px #000;
+    pointer-events: none;
+}
+
+/* Nút hiện khi thua hoặc thắng */
+#restart_btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Làm mượt chuyển động giữa hai lần cập nhật */
+#container {
+    --game-tick: 40ms;
+}
+
+#bird {
+    transition:
+        top var(--game-tick) linear,
+        transform var(--game-tick) ease-out;
+}
+
+.pole {
+    height: 150px;
+    transition: right var(--game-tick) linear;
+}
+
+/* Đưa ống về mép phải ngay lập tức khi nó đã ra khỏi khung */
+.pole.instant {
+    transition: none;
+}
+
+.best-score {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}

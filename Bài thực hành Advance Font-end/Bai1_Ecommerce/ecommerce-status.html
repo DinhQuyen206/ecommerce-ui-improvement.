@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFFSTEP | Trạng thái đơn hàng</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f5f6f8;
+      padding-bottom: 30px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .order-panel {
+      margin-top: 20px;
+    }
+
+    .order-header {
+      padding: 10px 0;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .order-item {
+      padding: 15px 0 8px;
+    }
+
+    .order-item > div {
+      margin-bottom: 10px;
+    }
+
+    .order-photo {
+      width: 72px;
+      max-width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      background: #edf0f4;
+    }
+
+    .order-message {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Thanh điều hướng -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button"
+                data-toggle="collapse" data-target="#shop-menu"
+                aria-controls="shop-menu" aria-expanded="false">
+          <span class="sr-only">Mở menu điều hướng</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="ecommerce.html">OFFSTEP</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="shop-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="ecommerce.html">Trang chủ</a></li>
+          <li><a href="ecommerce.html#san-pham">Sản phẩm</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="ecommerce-status.html" aria-current="page">
+              <span class="glyphicon glyphicon-shopping-cart"
+                    aria-hidden="true"></span>
+              Đơn hàng
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <ol class="breadcrumb">
+      <li><a href="ecommerce.html">Trang chủ</a></li>
+      <li class="active" aria-current="page">Đơn hàng</li>
+    </ol>
+
+    <h1>Trạng thái đơn hàng</h1>
+
+    <!-- 2.3 — Trang trạng thái đơn hàng -->
+    <section class="panel panel-default order-panel"
+             aria-labelledby="order-title">
+      <div class="panel-heading">
+        <h2 id="order-title" class="panel-title">Đơn hàng mẫu #OFF-001</h2>
+      </div>
+
+      <div class="panel-body">
+        <!-- Tiêu đề cột trên tablet và máy tính -->
+        <div class="row order-header hidden-xs">
+          <div class="col-sm-1">Ảnh</div>
+          <div class="col-sm-4">Sản phẩm</div>
+          <div class="col-sm-1">SL</div>
+          <div class="col-sm-2">Giá</div>
+          <div class="col-sm-2">Trạng thái</div>
+          <div class="col-sm-2">Tin nhắn</div>
+        </div>
+
+        <!-- Sáu cột Bootstrap: 1 + 4 + 1 + 2 + 2 + 2 = 12 -->
+        <div class="row order-item">
+          <div class="col-xs-3 col-sm-1">
+            <a href="ecommerce-detail.html">
+              <img class="img-thumbnail order-photo"
+                   src="images/runline-01.jpg"
+                   alt="Xem chi tiết giày OFFSTEP Runline">
+            </a>
+          </div>
+
+          <div class="col-xs-9 col-sm-4">
+            <a href="ecommerce-detail.html"><strong>OFFSTEP Runline</strong></a>
+            <p class="text-muted">Trắng xanh · Size 40</p>
+          </div>
+
+          <div class="col-xs-5 col-sm-1">
+            <span class="visible-xs-inline">Số lượng </span>1
+          </div>
+
+          <div class="col-xs-7 col-sm-2">
+            <span class="visible-xs-inline">Giá </span>
+            <strong>1.192.000 đ</strong>
+          </div>
+
+          <div class="col-xs-5 col-sm-2">
+            <span class="label label-success">Đã giao</span>
+          </div>
+
+          <div class="col-xs-7 col-sm-2">
+            <button class="btn btn-default btn-xs" type="button"
+                    data-toggle="collapse" data-target="#message-off-001"
+                    aria-controls="message-off-001" aria-expanded="false">
+              <span class="glyphicon glyphicon-envelope"
+                    aria-hidden="true"></span>
+              1 tin nhắn
+            </button>
+          </div>
+        </div>
+
+        <!-- Mở khi bấm nút 1 tin nhắn -->
+        <div class="collapse" id="message-off-001">
+          <div class="well well-sm order-message">
+            <strong>OFFSTEP</strong>
+            <p>Đơn hàng #OFF-001 đã được giao thành công.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a class="btn btn-default" href="ecommerce.html#san-pham">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+      Tiếp tục xem sản phẩm
+    </a>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
